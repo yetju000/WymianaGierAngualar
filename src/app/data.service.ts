@@ -23,4 +23,10 @@ export class DataService {
   getGames() {
     return this.http.get('http://gameexchange.getsandbox.com/games')
   }
+
+  postGame(gameId:number, userId:number){
+    return this.http.post('http://gameexchange.getsandbox.com/games/' + gameId + '/users/' + userId, "",{headers:{
+      'Content-Type': 'application/json'
+  }})
+  }
 }

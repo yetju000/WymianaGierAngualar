@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import {Router} from '@angular/router';
+
+
 @Component({
   selector: 'app-add-game',
   templateUrl: './add-game.component.html',
@@ -9,6 +11,7 @@ import {Router} from '@angular/router';
 export class AddGameComponent implements OnInit {
 
   games: Object;
+  game: Object;
   router: Router;
   loggedIn : boolean = false;
 
@@ -26,6 +29,7 @@ export class AddGameComponent implements OnInit {
       this.games = data
       console.log(this.games)
     })
+    
   }
 
   isLoggedIn(){
@@ -33,6 +37,13 @@ export class AddGameComponent implements OnInit {
     return false;
   }
 
+  addGame(id: number) {
+    this.data.postGame(id,1).subscribe(data => {
+      this.game = data
+      console.log(this.game)
+      
+    })
+  }
 
   
 }

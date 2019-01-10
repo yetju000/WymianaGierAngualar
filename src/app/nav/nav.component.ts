@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
+
 export class NavComponent implements OnInit {
 
   loggedIn: boolean = null;
@@ -14,6 +15,7 @@ export class NavComponent implements OnInit {
   reloaded: boolean = false;
 
   constructor() {
+    
    }
 
   
@@ -26,5 +28,6 @@ export class NavComponent implements OnInit {
     if (localStorage.getItem('loggedIn') == 'true'){return true;}
     return false;
   }
+  
 
 }

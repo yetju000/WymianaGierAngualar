@@ -2,6 +2,7 @@
  
 <ul *ngIf="games">
   <li *ngFor="let game of games"> 
-    <p class="right">{{ game.game }}</p>
+    <p class="right">{{ game.game }} <button (click)="addGame(game.id)">Dodaj gre</button></p>
   </li>
 </ul>
+
