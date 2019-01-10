@@ -1,0 +1,7 @@
+<h1>Your Games</h1>
+ 
+<ul *ngIf="games">
+  <li *ngFor="let game of games"> 
+    <p class="right">{{ game.game }}<img [src]="game.image"></p>
+  </li>
+</ul>

@@ -1,0 +1,9 @@
+<h1>Your friends</h1>
+ 
+<ul *ngIf="users">
+  <li *ngFor="let user of users"> 
+    
+    <p class="left"><img [src]="user.avatar" alt="Avatar">{{ user.name }} {{ user.lastname }}</p>
+    <p class="right">Total games exchanged: {{user.gamesExchanged}}</p>
+  </li>
+</ul>

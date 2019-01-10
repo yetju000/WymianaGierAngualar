@@ -1,0 +1,9 @@
+<h1>Games exchange</h1>
+ 
+<ul *ngIf="games">
+  <li *ngFor="let game of games"> 
+    
+    <p class="left"><img [src]="game.avatar">{{ game.name }} {{ game.lastname }}</p>
+    <p class="right">{{ game.from }}<img [src]="game.fromImage"><img class="arrow" src="assets/rightarrow.jpg"><img [src]="game.toImage">{{ game.to }}  <button>Click to exchange</button></p>
+  </li>
+</ul>
