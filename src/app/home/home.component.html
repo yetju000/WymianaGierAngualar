@@ -1,5 +1,10 @@
 <h1>Games exchange</h1>
- 
+<jw-modal id="custom-modal-1">
+  <h1>A Custom Modal!</h1>
+  <p><input type="text" disabled [(ngModel)]="bodyText" /></p>
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
+
 <ul *ngIf="games">
   <li *ngFor="let game of games"> 
     

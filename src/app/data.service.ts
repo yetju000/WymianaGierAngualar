@@ -31,7 +31,7 @@ export class DataService {
   }
 
   exchangeGame(gameId:number){
-    return this.http.post('http://gameexchange.getsandbox.com/games/exchange/' + gameId,{headers:{
+    return this.http.get('http://gameexchange.getsandbox.com/games/exchange/' + gameId,{headers:{
       'Content-Type': 'application/json'
   }})
   }
