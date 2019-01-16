@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-
+import {Game} from "./../../shared/game.model";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,6 +9,11 @@ import { DataService } from '../data.service';
 export class HomeComponent implements OnInit {
 
   games: Object;
+
+  exchange(id: number) {
+    this.data.postGame(id,1).subscribe(data => {
+    })
+  }
 
   constructor(private data: DataService) { }
 

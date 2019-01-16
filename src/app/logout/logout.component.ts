@@ -20,6 +20,7 @@ export class LogoutComponent implements OnInit {
       this.router.navigate(['/login']);
     localStorage.setItem("loggedIn", "false");
     this.router.navigateByUrl('/');
+    window.location.reload();
   }
 
   isLoggedIn(){

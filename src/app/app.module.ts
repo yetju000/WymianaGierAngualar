@@ -15,7 +15,6 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GamesComponent } from './games/games.component';
-import { ExchangesComponent } from './exchanges/exchanges.component';
 import { AddGameComponent } from './add-game/add-game.component';
 
 
@@ -32,7 +31,6 @@ import { AddGameComponent } from './add-game/add-game.component';
     LogoutComponent,
     ProfileComponent,
     GamesComponent,
-    ExchangesComponent,
     AddGameComponent
   ],
   imports: [

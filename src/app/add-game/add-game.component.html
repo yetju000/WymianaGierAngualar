@@ -1,8 +1,10 @@
-<h1>Choose a game</h1>
+<h1>Choose a games you have</h1>
  
 <ul *ngIf="games">
   <li *ngFor="let game of games"> 
-    <p class="right">{{ game.game }} <button (click)="addGame(game.id)">Dodaj gre</button></p>
+    <p class="right">{{ game.game }} <button (click)="addGame(game.id)">Add game</button></p>
   </li>
 </ul>
 
+<div id="gameAdded"></div>
+<div id="image"></div>

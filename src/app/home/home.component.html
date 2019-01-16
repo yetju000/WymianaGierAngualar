@@ -4,6 +4,6 @@
   <li *ngFor="let game of games"> 
     
     <p class="left"><img [src]="game.avatar">{{ game.name }} {{ game.lastname }}</p>
-    <p class="right">{{ game.from }}<img [src]="game.fromImage"><img class="arrow" src="assets/rightarrow.jpg"><img [src]="game.toImage">{{ game.to }}  <button>Click to exchange</button></p>
+    <p class="right">{{ game.from }}<img [src]="game.fromImage"><img class="arrow" src="assets/rightarrow.jpg"><img [src]="game.toImage">{{ game.to }}  <button (click)="exchange(game.id)">Exchange</button></p>
   </li>
 </ul>

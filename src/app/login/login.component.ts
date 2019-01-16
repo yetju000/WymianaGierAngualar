@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
     this.success = true;
     localStorage.setItem("loggedIn", "true");
     this.router.navigate(['/']);
+    window.location.reload();
   }
 
   ngOnInit() {

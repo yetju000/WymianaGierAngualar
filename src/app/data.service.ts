@@ -29,4 +29,10 @@ export class DataService {
       'Content-Type': 'application/json'
   }})
   }
+
+  exchangeGame(gameId:number){
+    return this.http.post('http://gameexchange.getsandbox.com/games/exchange/' + gameId,{headers:{
+      'Content-Type': 'application/json'
+  }})
+  }
 }

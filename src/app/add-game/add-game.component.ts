@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import {Router} from '@angular/router';
+import {Game} from "./../../shared/game.model";
+
 
 
 @Component({
@@ -11,7 +13,7 @@ import {Router} from '@angular/router';
 export class AddGameComponent implements OnInit {
 
   games: Object;
-  game: Object;
+  game: Game;
   router: Router;
   loggedIn : boolean = false;
 
@@ -39,9 +41,14 @@ export class AddGameComponent implements OnInit {
 
   addGame(id: number) {
     this.data.postGame(id,1).subscribe(data => {
-      this.game = data
+      this.game = new Game().deserialize(data);
       console.log(this.game)
-      
+
+      var myElement = document.getElementById('gameAdded');
+      myElement.innerText = "You have added a game to your account : " + this.game.name;
+
+      var imageElement = document.getElementById('image');
+      imageElement.innerHTML = "<img height='300' width='400' src='" + this.game.image + "'>";
     })
   }
 

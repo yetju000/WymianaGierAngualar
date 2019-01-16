@@ -9,7 +9,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GamesComponent } from './games/games.component';
-import { ExchangesComponent } from './exchanges/exchanges.component';
 import { AddGameComponent } from './add-game/add-game.component';
 
 
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'friends', component: FriendsComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'exchanges', component: ExchangesComponent },
   { path: 'games', component: GamesComponent },
   { path: 'addGame', component: AddGameComponent },
 ];
